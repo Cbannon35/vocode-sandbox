@@ -1,0 +1,178 @@
+.nav {
+  background-color: ivory;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  transition: top 3s ease-in-out;
+  z-index: 50;
+}
+
+.nav.open {
+  top: 0;
+}
+
+.navContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 30px;
+}
+
+.formItem {
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.promptInput {
+  margin-bottom: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: ivory;
+  font-family: "DOSVGA";
+  font-size: 16px;
+  resize: none;
+}
+
+.submittedPrompt {
+  margin-bottom: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: ivory;
+  font-family: "DOSVGA";
+  font-size: 30px;
+  text-align: center;
+  resize: none;
+}
+
+.submittedPrompt::placeholder {
+  color: green;
+}
+
+.submitPrompt {
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "DOSVGA";
+  border: 2px solid black;
+  background-color: ivory;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.navItemTitle {
+  /* border-radius: 20px; */
+  width: 100%;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  font-size: 20px;
+  margin: 0px;
+}
+
+@media (max-width: 800px) {
+  .navContent {
+    flex-direction: column;
+  }
+  .navItem {
+    margin-right: 0px;
+  }
+  .nav {
+    height: 100%;
+  }
+  .mediaWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .mediaWrapper {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+/* NavButton */
+
+.navButton {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  z-index: 100;
+}
+
+.navButtonActive {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navButtonInactive {
+  font-size: 30px;
+  cursor: not-allowed;
+}
+
+.vanish {
+  display: None;
+}
+
+.X {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+/* Text scroll from https://stackoverflow.com/questions/45847392/pure-css-continuous-horizontal-text-scroll-without-break */
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 16s linear infinite;
+}
+
+.marquee p {
+  margin: 20px;
+  /* margin-left: 200px;
+  margin-right: 200px; */
+  display: inline-block;
+  font-size: 40px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
