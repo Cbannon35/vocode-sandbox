@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Avatar.css";
-import { Spinny } from "./Spinny";
 
 function getRandomInt(max: number, min = 0) {
   min = Math.ceil(min);
@@ -41,9 +39,9 @@ export const Avatar = ({ status }: { status: string }) => {
   }
 
   return (
-    <div className={"avatar"}>
+    <div className="w-auto h-auto">
       {sprite.map((row, rowIndex) => (
-        <div key={rowIndex} className="row">
+        <div key={rowIndex} className="flex flex-row">
           {row.map((color, colIndex) => (
             <div
               key={colIndex}
@@ -57,12 +55,12 @@ export const Avatar = ({ status }: { status: string }) => {
           ))}
         </div>
       ))}
-      <button
-        style={{ position: "absolute", fontFamily: "DOSVGA", fontSize: "16px" }}
+      {/* <button
+        className="absolute text-sm border-2 rounded p-1 border-current hover:bg-slate-400"
         onClick={() => spriteHandler(getRandomInt(3, 48))}
       >
         Randomize
-      </button>
+      </button> */}
     </div>
   );
 };
