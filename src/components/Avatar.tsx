@@ -29,7 +29,7 @@ function generateRandomAvatar(dimension: number) {
 
 const avatar = generateRandomAvatar(32);
 
-export const Avatar = ({ status }: { status: string }) => {
+const Avatar = ({ status }: { status: string }) => {
   const [sprite, setSprite] = useState(avatar);
   const [spriteDimension, setSpriteDimension] = useState(avatar.length);
 
@@ -39,13 +39,12 @@ export const Avatar = ({ status }: { status: string }) => {
   }
 
   return (
-    <div className="w-auto h-auto">
+    <>
       {sprite.map((row, rowIndex) => (
         <div key={rowIndex} className="flex flex-row">
           {row.map((color, colIndex) => (
             <div
               key={colIndex}
-              className="square"
               style={{
                 backgroundColor: color,
                 width: `${100 / spriteDimension}%`,
@@ -55,12 +54,14 @@ export const Avatar = ({ status }: { status: string }) => {
           ))}
         </div>
       ))}
-      {/* <button
-        className="absolute text-sm border-2 rounded p-1 border-current hover:bg-slate-400"
+      <button
+        className="absolute text-sm text-text border-2 rounded p-1 border-border hover:bg-secondary"
         onClick={() => spriteHandler(getRandomInt(3, 48))}
       >
         Randomize
-      </button> */}
-    </div>
+      </button>
+    </>
   );
 };
+
+export default Avatar;

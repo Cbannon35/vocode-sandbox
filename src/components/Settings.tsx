@@ -41,14 +41,10 @@ const Settings = ({
   return (
     <>
       {!isMobile && (
-        <div className="flex flex-col color-inherit space-y-2 text-sm">
+        <div className="flex flex-col text-text space-y-2 text-sm">
           {inputDevices.length > 0 && (
             <select
-              color={"#FFFFFF"}
-              style={{
-                textOverflow: "ellipsis",
-                width: "250px",
-              }}
+              className="text-ellipsis w-[250px] bg-primary border border-border"
               disabled={["connecting", "connected"].includes(stat)}
               onChange={(event) =>
                 setAudioDeviceConfig({
@@ -69,11 +65,7 @@ const Settings = ({
           )}
           {outputDevices.length > 0 && (
             <select
-              color={"#FFFFFF"}
-              style={{
-                textOverflow: "ellipsis",
-                width: "250px",
-              }}
+              className="text-ellipsis w-[250px] bg-primary border border-border"
               disabled
               onChange={(event) =>
                 setAudioDeviceConfig({
@@ -93,8 +85,7 @@ const Settings = ({
             </select>
           )}
           <select
-            color={"#FFFFFF"}
-            style={{ width: "250px" }}
+            className="text-ellipsis w-[250px] bg-primary border border-border"
             disabled={["connecting", "connected"].includes(stat)}
             onChange={(event) =>
               event.target.value &&

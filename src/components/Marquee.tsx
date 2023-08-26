@@ -2,7 +2,7 @@
 
 const Marquee = () => {
   return (
-    <div className="relative flex overflow-x-hidden border-t-2 border-b-2 border-current">
+    <div className="relative flex overflow-x-hidden border-t-2 border-b-2 border-current cursor-default">
       <div className="py-6 animate-marquee whitespace-nowrap">
         <span className="text-4xl mx-4">Welcome to Sandbox for Vocode</span>
         <span className="text-4xl mx-4">----</span>
