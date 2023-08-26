@@ -3,18 +3,10 @@ import React, { useState, useEffect } from "react";
 const Transcript = () => {
   const [transcript, setTranscript] = useState([]);
 
-  //   0 for AI, 1 for user
+  //    0 for user, 1 for AI
   const dummyTranscript: [number, string][] = [
-    [0, "Test"],
-    [1, "Test"],
-    [0, "Test"],
-    [1, "Test"],
-    [0, "Test"],
-    [1, "Test"],
-    [0, "Test"],
-    [1, "Test"],
-    [0, "Test"],
-    [1, "Test"],
+    [1, "Welcome"],
+    [1, "Start talking to the AI to see the transcript here!"],
   ];
 
   const isAIMessage = (isAI: number) => {

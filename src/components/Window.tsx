@@ -48,12 +48,11 @@ const Window = ({
       maxWidth={maxw}
       maxHeight={maxh}
       lockAspectRatio={lockAspectRatio}
-      lockAspectRatioExtraHeight={24}
       dragHandleClassName="cursor-move"
       bounds="window"
     >
       <div className="w-full h-full flex flex-col">
-        <div className="border bg-primary border-border flex flex-row justify-between px-1">
+        <div className="w-full  border bg-primary border-border flex flex-row justify-between px-1">
           <strong className="flex-grow cursor-move -z-1 text-text">
             {title}
           </strong>
@@ -65,7 +64,7 @@ const Window = ({
           </span>
         </div>
         <div
-          className={`border-l border-r border-b border-border w-full h-full ${
+          className={`border-l border-r border-b border-border w-full h-full bg-secondary ${
             overflow ? "overflow-auto" : ""
           } ${minimized ? "hidden" : ""}`}
         >
