@@ -1,6 +1,6 @@
 # Sandbox for Vocode
 
-Welcome to Sandbox for Vocode. This is a place to play around with various prompts to feed to a Vocode's voice AI. The AI is initially fed a knock knock joke prompt, try it out!
+Welcome to Sandbox for Vocode. This is a place to play around with various prompts for Vocode's voice AI. The AI is initially fed a knock knock joke prompt, try it out!
 
 ### TODO:
 
