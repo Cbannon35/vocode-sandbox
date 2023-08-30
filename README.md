@@ -6,7 +6,8 @@ Welcome to Sandbox for Vocode. This is a place to play around with various promp
 
 As this is still a work in progress, there are many things I aim to improve and add to this site!
 
-~Priority #1~
+Priority #1:
+
 As it stands right now, I will need to create a backend to re-enable the ability to talk to the AI.
 
 - [ ] Add more themes
