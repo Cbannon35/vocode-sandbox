@@ -27,9 +27,13 @@ const Body = ({
   const [audioDeviceConfig, setAudioDeviceConfig] =
     React.useState<AudioDeviceConfig>({});
 
-  const { status, start, stop, analyserNode } = useConversation(
-    Object.assign(config, { audioDeviceConfig })
-  );
+  // const { status, start, stop, analyserNode } = useConversation(
+  //   Object.assign(config, { audioDeviceConfig })
+  // );
+  const { status, start, stop, analyserNode } = useConversation({
+    backendUrl: "ws://localhost:8000", // looks like ws://localhost:3000/conversation or wss://asdf1234.ngrok.app/conversation if using ngrok
+    audioDeviceConfig: {},
+  });
 
   const [showNav, setShowNav] = React.useState(false);
   const [theme, setTheme] = React.useState("light");
@@ -74,6 +78,15 @@ const Body = ({
         }}
       >
         {showNav ? <img src={Xpath} /> : "Options"}
+      </div>
+      <div className="fixed bottom-10 flex justify-center ">
+        <button
+          disabled={["connecting", "error"].includes(status)}
+          onClick={status === "connected" ? stop : start}
+          className="cursor-pointer"
+        >
+          hi
+        </button>
       </div>
       <Menu
         status={status}

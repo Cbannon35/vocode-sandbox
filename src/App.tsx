@@ -51,6 +51,7 @@ const App = () => {
   };
   const vocodeConfig: VocodeConfig = {
     apiKey: process.env.REACT_APP_VOCODE_API_KEY || "",
+    // baseUrl: "http://127.0.0.1:8000:" || "",
   };
 
   return (

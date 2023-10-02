@@ -27,4 +27,7 @@ firebase.json
 .firebaserc
 .firebase
 .idea
+
+__pycache__/
+env/
 ```
