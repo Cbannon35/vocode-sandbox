@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Env Variables Check</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked + label {
+            color: green;
+        }
+        input[type="checkbox"]:not(:checked) + label {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Env Variables</h2>
+    <p>Please set the following env variables:</p>
+    <ul>
+        {% for key, value in env_vars.items() %}
+            <li>
+                <input type="checkbox" id="{{ key }}" {% if value %}checked{% endif %} disabled>
+                <label for="{{ key }}">{{ key }}</label>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>WebSocket Route</h2>
+    <p>WebSocket route to pass into React SDK: <b>wss://{{ env_vars.REPLIT_URL }}/conversation</b></p>
+</body>
+</html>
