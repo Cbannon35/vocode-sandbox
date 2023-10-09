@@ -2,13 +2,12 @@
 
 Welcome to Sandbox for Vocode. This is a place to play around with various prompts for Vocode's voice AI. The AI is initially fed a knock knock joke prompt, try it out!
 
+Live Site: [sandbox](https://vocode-sandbox.web.app)
+Still working with Vocode to try to get a proper server up and running for my app.
+
 ### TODO:
 
 As this is still a work in progress, there are many things I aim to improve and add to this site!
-
-Priority #1:
-
-As it stands right now, I will need to create a backend to re-enable the ability to talk to the AI.
 
 - [ ] Add more themes
 - [ ] Expand Responsiveness (maxwidth of windows and where they start)
@@ -20,5 +19,3 @@ As it stands right now, I will need to create a backend to re-enable the ability
 This is a knock knock joke AI forked from the vocode react demo
 
 [demo.vocode.dev](https://demo.vocode.dev)
-
-[sandbox](https://vocode-sandbox.web.app)
